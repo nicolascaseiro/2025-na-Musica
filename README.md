@@ -1,7 +1,7 @@
 # 2025 na Música
 Análise de dados da playlist **2025 na Música** do Spotify
 
-🎵 [Playlist](https://open.spotify.com/playlist/32f0uBOvtYHqzmDZy6ZXRv?si=3RWD5UEBQeGWw1zBBus5kA)
+🎵 [Playlist](https://open.spotify.com/playlist/32f0uBOvtYHqzmDZy6ZXRv)
 
 🎯 [Dashboard](https://2025-na-musica.streamlit.app/)
 
