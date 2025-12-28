@@ -46,6 +46,3 @@ O diagrama abaixo representa os principais atores e funcionalidades do sistema d
 **RNF05 –** O sistema deve ser acessível via navegador web em diferentes dispositivos, incluindo desktops e dispositivos móveis, sem necessidade de instalação ou cadastro do usuário.  
 **RNF06 –** A comunicação para carregamento dos dados e acesso ao sistema é feita via protocolo seguro (HTTPS), garantindo a integridade e segurança da transmissão.  
 **RNF07 –** O sistema deve utilizar mecanismos de cache para otimizar o desempenho, evitando recargas desnecessárias dos dados durante a mesma sessão.
-
----
-
