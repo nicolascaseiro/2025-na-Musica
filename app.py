@@ -34,9 +34,17 @@ st.sidebar.header("Filtros")
 def ordenar_meses(meses_selecionados):
     return sorted(meses_selecionados, key=lambda m: meses_pt.index(m))
 
+def ordenar_pt(series):
+    return pd.Series(series).dropna().sort_values(
+        key=lambda s: s.str.normalize('NFKD')
+                       .str.encode('ascii', errors='ignore')
+                       .str.decode('utf-8')
+                       .str.lower()
+    ).unique().tolist()
+
 meses_disponiveis = ordenar_meses(df_temp['Mês'].dropna().unique())
 generos_disponiveis = sorted(df_temp['Gêneros_lista'].dropna().unique())
-artistas_disponiveis = sorted(df_temp['Artistas_lista'].dropna().unique())
+artistas_disponiveis = ordenar_pt(df_temp['Artistas_lista'])
 
 mes_selecionado = st.sidebar.multiselect('Filtrar por Mês:', meses_disponiveis)
 genero_selecionado = st.sidebar.multiselect('Filtrar por Gênero:', generos_disponiveis)
